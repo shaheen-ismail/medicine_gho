@@ -1,10 +1,9 @@
 import 'package:enefty_icons/enefty_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medicine_gho/core/constants/colors.dart';
-import 'package:medicine_gho/core/constants/image_constants.dart';
-import 'package:medicine_gho/core/constants/text_constants.dart';
-import 'package:medicine_gho/core/widgets/custom_textform_widget.dart';
+import 'package:medicine_gho/core/constants/constants.dart';
+import 'package:medicine_gho/core/widgets/widgets.dart';
+import 'package:medicine_gho/view/auth%20screen/register%20screen/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -14,172 +13,118 @@ class LoginScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ColorConstants.mainBgColor,
-      body: Column(
-        children: [
-          // make stateless
-          Container(
-            height: size.height * 0.30,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(90.0),
-                  bottomRight: Radius.circular(90.0)),
-              color: ColorConstants.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const LoginBanner(
+              text: TextConstants.yourdoctor,
+              icon: EneftyIcons.hospital_outline,
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(
-                  EneftyIcons.hospital_outline,
-                  size: 80.0,
-                  color: ColorConstants.mainBlue,
-                ),
-                Center(
-                  child: Text(TextConstants.yourdoctor,
-                      style: GoogleFonts.inter(
-                          color: ColorConstants.black,
-                          fontSize: 22.0,
-                          fontWeight: FontWeight.bold)),
-                )
-              ],
-            ),
-          ),
-          // make stateless
-          const SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Email",
-                  style: GoogleFonts.inter(
-                      fontSize: 14.0,
-                      color: ColorConstants.black,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 10),
-                const CustomTextFormField(hintText: "Enter Email"),
-                const SizedBox(height: 16),
-                Text(
-                  "Password",
-                  style: GoogleFonts.inter(
-                      fontSize: 14.0,
-                      color: ColorConstants.black,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 10),
-                const CustomTextFormField(hintText: "Enter Password"),
-                const SizedBox(height: 10),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Forgot Your Password?",
-                        style: GoogleFonts.inter(
-                            fontSize: 12.0,
-                            color: ColorConstants.mainBlue,
-                            fontWeight: FontWeight.bold),
-                      )),
-                ),
-                const SizedBox(height: 10),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        color: ColorConstants.mainBlue),
-                    child: Center(
-                        child: Text(
-                      'Sign In',
-                      style: GoogleFonts.inter(
-                          fontSize: 14,
-                          color: ColorConstants.white,
-                          fontWeight: FontWeight.bold),
-                    )),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                Center(
-                  child: Text(
-                    "Or Continue With",
+            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    TextConstants.email,
                     style: GoogleFonts.inter(
                         fontSize: 14.0,
                         color: ColorConstants.black,
                         fontWeight: FontWeight.bold),
                   ),
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        height: 50,
-                        width: size.width * 0.45,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: ColorConstants.white,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              ImageConstants.facebook,
-                              height: 20,
-                              width: 20,
-                            ),
-                            const SizedBox(width: 10),
-                            Text(
-                              "Facebook",
-                              style: GoogleFonts.inter(
-                                  fontSize: 12.0,
-                                  color: ColorConstants.mainBlue,
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    Container(
-                      height: 50,
-                      width: size.width * 0.45,
-                      color: ColorConstants.white,
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "You don't have account?",
-                      style: GoogleFonts.inter(
+                  const SizedBox(height: 10),
+                  const CustomTextFormField(hintText: TextConstants.enteremail),
+                  const SizedBox(height: 16),
+                  Text(
+                    TextConstants.password,
+                    style: GoogleFonts.inter(
                         fontSize: 14.0,
                         color: ColorConstants.black,
-                      ),
-                    ),
-                    TextButton(
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 10),
+                  const CustomTextFormField(
+                    hintText: TextConstants.enterpassword,
+                    isPasswordField: true,
+                  ),
+                  const SizedBox(height: 10),
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: TextButton(
                         onPressed: () {},
                         child: Text(
-                          "Sign Up",
+                          TextConstants.forgotpassword,
                           style: GoogleFonts.inter(
-                              fontSize: 14.0,
+                              fontSize: 12.0,
                               color: ColorConstants.mainBlue,
                               fontWeight: FontWeight.bold),
-                        ))
-                  ],
-                ),
-              ],
-            ),
-          )
-        ],
+                        )),
+                  ),
+                  const SizedBox(height: 10),
+                  CustomElevatedButton(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterScreen()));
+                    },
+                    text: TextConstants.signin,
+                  ),
+                  const SizedBox(height: 20),
+                  Center(
+                    child: Text(
+                      TextConstants.continuewith,
+                      style: GoogleFonts.inter(
+                          fontSize: 14.0,
+                          color: ColorConstants.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    children: [
+                      SignInWithButton(
+                        onTap: () {},
+                        text: TextConstants.facebook,
+                        imagePath: ImageConstants.facebook,
+                      ),
+                      const SizedBox(width: 10),
+                      SignInWithButton(
+                          onTap: () {},
+                          text: TextConstants.google,
+                          imagePath: ImageConstants.google),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        TextConstants.youdonthaveanaccount,
+                        style: GoogleFonts.inter(
+                          fontSize: 14.0,
+                          color: ColorConstants.black,
+                        ),
+                      ),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            TextConstants.signup,
+                            style: GoogleFonts.inter(
+                                fontSize: 14.0,
+                                color: ColorConstants.mainBlue,
+                                fontWeight: FontWeight.bold),
+                          ))
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
