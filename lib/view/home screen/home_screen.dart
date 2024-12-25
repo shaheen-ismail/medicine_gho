@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
         "location": "New York",
         "rating": 4.8,
         "price": "600 EGP",
-        "imagePath": "assets/images/doctor1.png",
+        "imagePath": ImageConstants.doctor2,
       },
       {
         "doctorName": "Dr. John Doe",
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
         "location": "Los Angeles",
         "rating": 4.7,
         "price": "700 EGP",
-        "imagePath": "assets/images/doctor2.png",
+        "imagePath": ImageConstants.doctor2,
       },
       {
         "doctorName": "Dr. Jane Smith",
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
         "location": "Chicago",
         "rating": 4.9,
         "price": "800 EGP",
-        "imagePath": "assets/images/doctor3.png",
+        "imagePath": ImageConstants.doctor2,
       },
     ];
     final List<Map<String, String>> offers = [
@@ -59,14 +59,14 @@ class HomeScreen extends StatelessWidget {
         "description":
             "Offer 50% off for your first video \n call with your doctor.",
         "buttonText": "Get Offer",
-        "imagePath": "assets/images/facebook.png",
+        "imagePath": ImageConstants.doctor1,
       },
       {
         "title": "Hello Doctor!",
         "description":
             "Offer 50% off for your first video \n call with your doctor.",
         "buttonText": "Get Offer",
-        "imagePath": "assets/images/facebook.png",
+        "imagePath": ImageConstants.doctor2,
       },
     ];
 

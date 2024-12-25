@@ -5,11 +5,15 @@ import 'package:provider/provider.dart';
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final bool isPasswordField;
+  final TextEditingController? controller;
+  final String? Function(String?)? validator;
 
   const CustomTextFormField({
     super.key,
     required this.hintText,
     this.isPasswordField = false,
+    this.controller,
+    this.validator,
   });
 
   @override
@@ -19,6 +23,8 @@ class CustomTextFormField extends StatelessWidget {
         return TextFormField(
           obscureText:
               isPasswordField ? passwordVisibilityProvider.isObscured : false,
+          controller: controller,
+          validator: validator,
           decoration: InputDecoration(
             hintText: hintText,
             filled: true,

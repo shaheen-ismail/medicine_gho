@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicine_gho/controller/auth_provider.dart';
 import 'package:medicine_gho/controller/common_controller.dart';
 import 'package:medicine_gho/controller/splash_controller.dart';
 import 'package:medicine_gho/view/splash%20screen/splash_screen.dart';
@@ -9,7 +10,8 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => SplashProvider()),
-        ChangeNotifierProvider(create: (context) => CommonProvider())
+        ChangeNotifierProvider(create: (context) => CommonProvider()),
+        ChangeNotifierProvider(create: (context) => AuthProvider())
       ],
       child: const MyApp(),
     ),
