@@ -2,6 +2,7 @@ import 'package:enefty_icons/enefty_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medicine_gho/core/constants/colors.dart';
+import 'package:medicine_gho/core/constants/image_constants.dart';
 import 'package:medicine_gho/core/constants/text_constants.dart';
 import 'package:medicine_gho/core/widgets/custom_textform_widget.dart';
 
@@ -44,6 +45,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           // make stateless
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
@@ -57,6 +59,7 @@ class LoginScreen extends StatelessWidget {
                       color: ColorConstants.black,
                       fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(height: 10),
                 const CustomTextFormField(hintText: "Enter Email"),
                 const SizedBox(height: 16),
                 Text(
@@ -66,7 +69,9 @@ class LoginScreen extends StatelessWidget {
                       color: ColorConstants.black,
                       fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(height: 10),
                 const CustomTextFormField(hintText: "Enter Password"),
+                const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.topRight,
                   child: TextButton(
@@ -79,6 +84,7 @@ class LoginScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       )),
                 ),
+                const SizedBox(height: 10),
                 GestureDetector(
                   onTap: () {},
                   child: Container(
@@ -97,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                     )),
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Center(
                   child: Text(
                     "Or Continue With",
@@ -107,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Row(
                   children: [
                     GestureDetector(
@@ -122,6 +128,12 @@ class LoginScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            Image.asset(
+                              ImageConstants.facebook,
+                              height: 20,
+                              width: 20,
+                            ),
+                            const SizedBox(width: 10),
                             Text(
                               "Facebook",
                               style: GoogleFonts.inter(
@@ -141,8 +153,10 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "You don't have account?",
