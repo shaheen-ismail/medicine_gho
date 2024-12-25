@@ -1,0 +1,88 @@
+.dart_tool/.packages.flutter-plugins.flutter-plugins-dependenciesbuild/ios/Pods/.idea/.DS_Store
+# Flutter/Dart related
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+generated_plugin_registrant.dart
+# Build outputs
+build/
+# iOS specific
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+# macOS specific
+macos/Flutter/ephemeral/
+# Android specific
+android/.gradle/
+android/app/build/
+android/local.properties
+# IDE and system files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.DS_Store
+*.swp
+
+# Dart
+.dart_tool/
+.packages
+.pub-cache/
+build/
+*.lock
+
+# Flutter specific
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+.generated/
+android/local.properties
+
+# IntelliJ
+*.iml
+.idea/
+.idea/*
+
+# VS Code
+.vscode/
+
+# macOS
+*.DS_Store
+
+# Windows
+*.exe
+Thumbs.db
+
+# Linux
+*.so
+
+# Web
+*.dart.js
+*.dart.js.map
+*.css
+*.html
+
+# Test result
+coverage/
+
+# Misc
+*.log
+*.bak
+*.swp
+*.tmp
+
+
+
+
+
+
+
+
+
+
+
+
+
