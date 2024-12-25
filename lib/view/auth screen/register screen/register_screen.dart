@@ -2,6 +2,7 @@ import 'package:enefty_icons/enefty_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medicine_gho/core/constants/constants.dart';
+import 'package:medicine_gho/core/widgets/custom_mobile_widget.dart';
 import 'package:medicine_gho/core/widgets/widgets.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -36,6 +37,8 @@ class RegisterScreen extends StatelessWidget {
                   const SizedBox(height: 10),
                   const CustomTextFormField(hintText: TextConstants.enteremail),
                   const SizedBox(height: 16),
+                  const MobileNumberInput(),
+                  const SizedBox(height: 10),
                   Text(
                     TextConstants.password,
                     style: GoogleFonts.inter(

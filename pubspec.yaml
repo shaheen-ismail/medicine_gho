@@ -39,6 +39,7 @@ dependencies:
   enefty_icons: ^1.0.7
   iconsax: ^0.0.8
   provider: ^6.1.2
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:medicine_gho/core/constants/constants.dart';
 import 'package:medicine_gho/core/widgets/widgets.dart';
 import 'package:medicine_gho/view/auth%20screen/register%20screen/register_screen.dart';
+import 'package:medicine_gho/view/bottom%20nav/bottom_nav.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -68,7 +69,7 @@ class LoginScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const RegisterScreen()));
+                              builder: (context) => BottomNavBarExample()));
                     },
                     text: TextConstants.signin,
                   ),
@@ -110,7 +111,13 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const RegisterScreen()));
+                          },
                           child: Text(
                             TextConstants.signup,
                             style: GoogleFonts.inter(
